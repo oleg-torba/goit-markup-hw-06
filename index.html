@@ -391,6 +391,22 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-form">
+                <h3 class="form-title">Подпишитесь на рассылку</h3>
+                <form class="form">
+                    <div class="form-item">
+                        <label for="mail"></label>
+                        <input type="email" name="mail" id="mail" placeholder="E-mail">
+                    </div>
+                    <div class="form-item">
+                        <button class="follow-button" type="submit">Подписаться
+                            <svg class="follow-icon" width="24" height="24">
+                                <use href="./images/sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -400,7 +416,33 @@
                     <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+            <div>
+                <h3>Оставьте свои данные, мы вам перезвоним</h3>
+                <form class="form">
+                    <ul class="modal-form-item">
+                        <li class="modal-form-list">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name">
+                        </li>
+                        <li class="modal-form-list">
+                            <label for="tel">Телефон</label>
+                            <input type="tel" name="tel" id="tel">
+                        </li>
+                        <li class="modal-form-list">
+                            <label for="mail">Почта</label>
+                            <input type="email" name="mail" id="mail">
+                        </li>
+                        <li class="modal-form-list">
+                            <label for="comment">Комментарий</label>
+                            <textarea name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+                        </li>
+                        <button class="submit-button" type="submit">Отправить</button>
+                    </ul>
+                    
+                </form>
+            </div>
         </div>
+        
     </div>
     <script src="./js/modal.js"></script>
 </body>
