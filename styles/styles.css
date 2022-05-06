@@ -816,7 +816,6 @@ body {
     background-color: var(--adress-hero-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    overflow-y: auto;
 }
 
 .modal-button {
@@ -892,7 +891,8 @@ body {
 
 
 .form {
-    display: flex;}
+    display: flex;
+}
 
 
 .form-item {
@@ -966,18 +966,19 @@ textarea {
 }
 
 .modal-title {
-    font-weight: 700;
-    font-size: 20px;
+    display: block;
     margin-bottom: 12px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 1.15;
     text-align: center;
-    /* width: 100%; */
+    min-width: 100%;
     letter-spacing: 0.03em;
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
+
     margin-bottom: 10px;
     
 }
@@ -1085,38 +1086,50 @@ textarea {
 
 
 .checkbox-label {
-    position: relative;
+    
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
 }
+
+/* .dd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color);
+} */
 .checkbox-icon {
     
-    position: absolute;
+    display: inline-block;
     left: 0;
-    fill: var(--hover-color);
     border: 2px solid #212121;
-    
-    border-radius: 2px;
+    border-radius: 3px;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
     cursor: pointer;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .checkbox:checked + .checkbox-icon {
-    fill: none;
-    border-radius: 2px;
     border-color: transparent;
+    fill: none;
+    border: #2196F3;
     background-color: #2196F3;
-    /* background-image: url(../images/check.svg);
-    background-origin: border-box; */
-    /* width: 16px;
-    height: 15px; */
+    background-image: url("../images/iconcheck-1.svg");
+    background-size: contain;
+    background-origin: border-box;
+    
 }
 
 
