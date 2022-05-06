@@ -1080,21 +1080,30 @@ textarea {
     color: var(--secondary-color);
 }
 .checkbox-icon {
-    fill: #FFFFFF;
+    /* position: absolute;
+    left: 0;
+    top: 50%; */
     display: inline-block;
     border: 2px solid #212121;
     border-radius: 2px;
     cursor: pointer;
     margin-right: 7px;
+    fill: #FFFFFF;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .checkbox:checked + .checkbox-icon {
+    
     border-color: transparent;
     background-origin: border-box;
     background-size: contain;
-    background-color: var(--hover-color);
+    background-image: url("../images/check.svg");
+    background-color: #2196F3;
+    width: 16px;
+    height: 15px;
 }
+
 
 
 .privacy-policy {
