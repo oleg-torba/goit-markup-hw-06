@@ -735,6 +735,7 @@ body {
 }
 .footer-icon {
     display: flex;
+    margin-right: 93px;
     
 }
 
@@ -875,9 +876,9 @@ body {
 }
     
 /* Форма футера */
-.footer-form {
-    margin-left: auto;
-}
+/* .footer-form {
+    margin-left: auto; */
+
 
 .form-title {
     color: var(--adress-hero-color);
@@ -896,6 +897,7 @@ body {
 
 .form-item {
     margin-right: 12px;
+
     list-style: none;
     outline: none;
 
@@ -904,7 +906,7 @@ body {
 .form-item input[type=email] {
     display: flex;
     color: rgba(255, 255, 255, 0.6);
-    min-width: 448px;
+    min-width: 358px;
     height: 50px;
     padding: 15px 16px;
     color: var(--secondary-color);
@@ -918,6 +920,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
     
 }
 
@@ -950,6 +954,10 @@ body {
     fill: var(--adress-hero-color);
 }
 
+
+.form-item input:focus {
+    border-color: var(--hover-color);
+}
 
 /* Стилі форми модалки */
 
@@ -1041,6 +1049,7 @@ textarea {
 .textarea {
     color: var(--secondary-color);
     padding: 12px 16px;
+    height: 448px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -1058,21 +1067,28 @@ textarea {
 
 /* Чекбокс */
 
-.modal-checkbox {
-    margin-bottom: 30px;
-}
+/*  */
+
 .checkbox {
-    
-    width: 16px;
-    height: 15px;
-    
-    /* transition: fill, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    overflow: hidden;
 }
 
+
+
+
 .checkbox-label {
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.714;
@@ -1080,33 +1096,33 @@ textarea {
     color: var(--secondary-color);
 }
 .checkbox-icon {
-    /* position: absolute;
+    
+    position: absolute;
     left: 0;
-    top: 50%; */
-    display: inline-block;
+    fill: var(--hover-color);
     border: 2px solid #212121;
+    
     border-radius: 2px;
     cursor: pointer;
-    margin-right: 7px;
-    fill: #FFFFFF;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .checkbox:checked + .checkbox-icon {
-    
+    fill: none;
+    border-radius: 2px;
     border-color: transparent;
-    background-origin: border-box;
-    background-size: contain;
-    background-image: url("../images/check.svg");
     background-color: #2196F3;
-    width: 16px;
-    height: 15px;
+    /* background-image: url(../images/check.svg);
+    background-origin: border-box; */
+    /* width: 16px;
+    height: 15px; */
 }
 
 
 
 .privacy-policy {
+    
     font-size: 14px;
     line-height: 1.71px;
     letter-spacing: 0.03em;
